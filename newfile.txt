@@ -1,3 +1,9 @@
 text in text file jordan bennett
+<<<<<<< HEAD
 Krish Sharma 
 Regan McAleavy edited this.
+=======
+This is my edit :Krish Sharma 
+This is my edit: Jin Peng
+This is my edit: Regan McAleavy
+>>>>>>> b73b3c01f963f53711b74a74f7a16c403ea51652
