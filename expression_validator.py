@@ -1,6 +1,24 @@
 import re
 
 def validate_expression(expression, numbers, target, player_data):
+    """ Validates a player's math expression based on provided numbers to see if
+    it evaluates to 24
+    
+    Parameters:
+        expression (str): The player's inputted math expression 
+        numbers (list of int): The list of allowed numbers the player can use
+        target (int): The target value the player's expression should evaluate 
+        to
+        player_data (dict): A dictionary tracking the player's score and streak
+        
+    Returns:
+        bool: True if the expression is correct and valid, False otherwise.
+        
+    Side Effects:
+        prints score to console
+        modifies player score and streak (good for leaderboard)
+    
+    """
 
     
     used_numbers = list(map(int, re.findall(r'\d+', expression)))
