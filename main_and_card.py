@@ -18,7 +18,6 @@ The game of adding, subtracting, multiplying, and dividing
         if gather.lower() == 'leaderboard':
             leaderboard()
         elif gather.lower() == 'rules':
-            print('working')
             help()
         elif gather.lower() == 'play':
             players, rounds = card()
@@ -49,23 +48,32 @@ def leaderboard():
     pass
 
 def help():
-    print('working')
-    site = "https://mathworld.wolfram.com/ReversePolishNotation.html"
+    """ Enters the help window, presenting the user with rules and a video.
+    
+    Side Effects:
+    if "more" is typed, player is brought to a video in their browser. 
+    """
+    site = "https://vimeo.com/1013357391"
     help_string = """
-    After typing 'play' into the prompt box, you will be greeted 
-    with a card.
+    24 is played by taking 4 numbers and using basic arethmetic operations to
+    get to the number 24.
+    After typing 'play' into the prompt box, you will be asked for the names
+    of all players and how many rounds you are going to play. 
+    After this set up, you will be greeted with a card.
     ----------------- 
     | 2 | 3 | 2 | 4 |  
     -----------------  
-    To play, enter your expression in reverse polish notation (RPN).  
-    If you do not know RPN, type 'RPN' into the text box. 
+    To play, the first player that got an answer must write their name in the
+    box. After, they must type in their answer.
+    EXAMPLE: (2+2+4)*3
+    Still dont understand? To watch a video on the rules, type "more".
     Otherwise, type 'return' """
     print(help_string)
     gather = input("What would you like to do? ")
     if gather.lower() == 'exit':
         print("Exiting program.")
         sys.exit()
-    if gather.lower() == "rpn":
+    if gather.lower() == "more":
         webbrowser.open_new(site)
         return
     if gather.lower() == "return":
@@ -87,6 +95,7 @@ class Creation:
         # Instance attributes
         self.full_deck = [val for val in range(1, 14) for _ in range(4)]
         self.recent_hands = []
+        self.current_hand = []
 
     def draw_unique_hand(self, max_attempts=100):
         """
@@ -108,6 +117,7 @@ class Creation:
 
             if hand_tuple not in self.recent_hands:  # Ensure it's a unique hand
                 self.recent_hands.append(hand_tuple)
+                self.current_hand = hand_tuple
                 return hand
         raise Exception("Failed to find a unique hand after max attempts.")  
     def __str__ (self):
@@ -162,7 +172,7 @@ def play_game(players, rounds):
             continue
 
         solution = input("Enter your solution in RPN: ")
-        if regan_validator(solution, hand): # needs edit
+        if regan_validator(solution, game.current_hand): # needs edit
             print("Correct! +1 point")
             scores[player_name] += 1
         else:
