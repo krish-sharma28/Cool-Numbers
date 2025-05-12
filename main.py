@@ -4,6 +4,7 @@ import random
 from expression_validator import validate_expression
 from timed_mode import timed_mode
 from creation_and_rounds_mode import Creation, card, play_game
+from leaderboard import show_leaderboard
 
 
 def main():
@@ -26,7 +27,8 @@ The game of adding, subtracting, multiplying, and dividing\
     "- play\n"
     "- exit\n")
         if gather.lower() == 'leaderboard':
-            leaderboard()
+            mode=input("Which mode leaderboard do you want to see?")
+            show_leaderboard(mode.lower())
         elif gather.lower() == 'rules':
             help()
         elif gather.lower() == 'play':
