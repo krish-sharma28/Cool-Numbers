@@ -1,6 +1,6 @@
 from time import time
-from card_creation import draw_unique_hand
-from expression_validator import validate_expression, evaluate_expression
+from creation_and_rounds_mode import Creation
+from expression_validator import validate_expression
 from leaderboard import update_leaderboard
 
 def timed_mode():
@@ -16,6 +16,10 @@ def timed_mode():
     """
     start = time()
     score = 0
+    game = Creation()
+    name = input("Enter your name: ")
+
+
     
     while True:
         now = time()
@@ -24,20 +28,18 @@ def timed_mode():
             break
 
         print(f"\nTime Remaining: {int(90 - elapsed)} seconds")
-        hand = draw_unique_hand()
+        hand = game.draw_unique_hand()
         print(f"Your Hand: {hand}")
 
         while True:
             user_in = input("Enter your solution (or type 'skip' to skip\
-                            to the next hand): ").strip().lower()
+ to the next hand): \n").strip().lower()
 
             if user_in == 'skip':
                 print("Skipping to next hand...")
                 break
 
-            if validate_expression(user_in, hand) and evaluate_expression\
-            (user_in):
-                print("Correct! +1000 points")
+            if validate_expression(user_in, hand):
                 score += 1000
                 break
             else:
@@ -50,5 +52,4 @@ def timed_mode():
             print(f"Time Remaining: {int(90 - elapsed)} seconds")
 
     print(f"\n Time's up! Final Score: {score}")
-    name = input("Enter your name: ")
     update_leaderboard(name, score, mode='timed')
