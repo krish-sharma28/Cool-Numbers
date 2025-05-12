@@ -30,8 +30,10 @@ def timed_mode():
         print(f"Your Hand: {hand}")
 
         while True:
-            user_in = input("Enter your solution (or type 'skip' to skip\
-                            to the next hand): ").strip().lower()
+            user_in = input(
+                "Enter your solution (or type 'skip' to skip "
+                "to the next hand): "
+            ).strip().lower()
 
             if user_in == 'skip':
                 print("Skipping to next hand...")
