@@ -1,5 +1,4 @@
 import re
-
 def validate_expression(expression, numbers):
     """ Validates a player's math expression based on provided numbers to see if
     it evaluates to 24
@@ -23,10 +22,15 @@ def validate_expression(expression, numbers):
 
 
     try:
-        result = eval(expression)
+        result = eval(expression)        
+
+        if set(expression) != set(numbers): 
+            print("You cant use these numbers. Cheater")
+            return False
+        
 
         if result == target:
-            print("Correct! +1 point")
+            print("Correct! +1000 point")
             return True
         else:
             print("Incorrect: Wrong result.")
