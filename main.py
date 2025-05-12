@@ -1,6 +1,5 @@
 import webbrowser
 import sys
-import random
 from expression_validator import validate_expression
 from timed_mode import timed_mode
 from creation_and_rounds_mode import Creation, card, play_game

@@ -25,10 +25,10 @@ class Creation:
             raise ValueError("Not enough cards in the deck to draw a hand.")
         
         for _ in range(max_attempts):
-            hand = random.sample(self.full_deck, 4)  # Randomly draw 4 cards
+            hand = random.sample(self.full_deck, 4)  
             hand_tuple = tuple(sorted(hand))
 
-            if hand_tuple not in self.recent_hands:  # Ensure it's a unique hand
+            if hand_tuple not in self.recent_hands: 
                 self.recent_hands.append(hand_tuple)
                 return hand
         raise Exception("Failed to find a unique hand after max attempts.")    
@@ -70,7 +70,7 @@ def play_game(players, rounds):
             continue
 
         solution = input("Enter your solution: ")
-        if validate_expression(solution, hand): # needs edit
+        if validate_expression(solution, hand):
             print("Correct! +1 point")
             scores[player_name] += 1
         else:
