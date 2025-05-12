@@ -1,4 +1,5 @@
-﻿# Cool-Numbers
+# Cool-Numbers
+# Cool-Numbers
 
 ## 1. An explanation of the purpose of each file in the repository:
 
