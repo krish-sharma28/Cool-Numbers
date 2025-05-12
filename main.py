@@ -1,11 +1,33 @@
 import webbrowser
 import sys
 import random
+import argparse
 from expression_validator import validate_expression
 from timed_mode import timed_mode
 from creation_and_rounds_mode import Creation, card, play_game
 from leaderboard import show_leaderboard
 
+def get_args():
+    """Parses args for ease of access to game. 
+    Has two options, --mode and --leaderboard
+    Both take "timed" and "rounds" as choices.
+    
+    Returns:
+    parser - arguments are taken from cmd line and parsed.
+    
+    """
+    parser = argparse.ArgumentParser(description="Play the 24 game.")
+    parser.add_argument(
+        "--mode",
+        choices=["timed", "rounds"],
+        help="Start directly in a game. Type timed or rounds to select.",
+    )
+    parser.add_argument(
+        "--leaderboard",
+        choices=["timed", "rounds"],
+        help="View leaderboards. Type timed or rounds to select.",
+    )
+    return parser.parse_args()
 
 def intro():
     """ Logic for the introduction to the game. Allows user to pick between
@@ -17,6 +39,7 @@ def intro():
         - Prints to console.
     
     """
+    
     key = 0
     welcome_string = """========================================================
 Welcome to 24!\n 
@@ -81,4 +104,14 @@ def help():
     return
 
 if __name__ == "__main__":
-    intro()
+    args = get_args()
+
+    if args.leaderboard:
+        show_leaderboard(args.leaderboard)
+    elif args.mode == "rounds":
+        players, rounds = card()
+        play_game(players, rounds)
+    elif args.mode == "timed":
+        timed_mode()
+    else:
+        intro()
