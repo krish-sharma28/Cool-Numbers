@@ -1,4 +1,2 @@
 Krish,2000
 jin,0
-& C:/Users/jjpen/AppData/Local/Microsoft/WindowsApps/python3.13.exe c:/Users/jjpen/OneDrive/Documents/cool_numbers/Cool-Numbers/main.py,0
-jin,0
