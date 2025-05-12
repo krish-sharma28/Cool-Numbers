@@ -71,8 +71,8 @@ def play_game(players, rounds):
 
         solution = input("Enter your solution: ")
         if validate_expression(solution, hand):
-            print("Correct! +1 point")
-            scores[player_name] += 1
+            print("Correct! +1000 point")
+            scores[player_name] += 1000
         else:
             print("Incorrect.")
     print("\nFinal Scores:")
