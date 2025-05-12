@@ -1,4 +1,5 @@
-regan,1
+Krish,1000
+regan,1000
 krish,0
 krish,0
 regan,0
