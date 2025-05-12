@@ -10,8 +10,11 @@ from leaderboard import show_leaderboard
 def intro():
     """ Logic for the introduction to the game. Allows user to pick between
     leaderboard, rules, play, or exit.
-
+    Prompts the user in a loop until a valid option is selected.
     
+    Side effects:
+        - Calls play_game(), timed_mode(), show_leaderboard(), help()
+        - Prints to console.
     
     """
     key = 0
@@ -24,12 +27,12 @@ and dividing 4 numbers to reach 24.
     # handle logic for leaderboard, help, and play
     while key == 0:
         print(welcome_string)
-        gather = input("What would you like to do?\n"
-    "Options:\n"
-    "- leaderboard\n"
-    "- rules\n"
-    "- play\n"
-    "- exit\n")
+        gather = input("""What would you like to do? \nOptions:
+        - leaderboard
+        - rules
+        - play
+        - exit\n""")
+        
         if gather.lower() == 'leaderboard':
             mode = input("Do you want to see Timed or Rounds leaderboard? ")
             try:
@@ -49,6 +52,7 @@ and dividing 4 numbers to reach 24.
                 timed_mode()
             else:
                 print("Not a mode! Try Timed or Rounds")
+                intro()
             break
         elif gather.lower() == 'exit':
             return print("Exiting program.")
@@ -58,13 +62,22 @@ and dividing 4 numbers to reach 24.
 
 
 def help():
-    site = "https://vimeo.com/1013357391"
-    with open("helpstring.txt", "r") as file:
+    """ Prints out rules from a txt file.
+    
+        Side effects:
+            - Reads from file
+            - Opens a browser window if 'more' is entered
+            - Prints to console
+    """
+    site = "https://vimeo.com/1013357391" #site that has rules for game
+    
+    with open("helpstring.txt", "r") as file: #helpstring.txt contains help
         contents = file.read()
         print(contents)
     
     gather = input("What would you like to do? ")
-    webbrowser.open_new(site) if gather.lower() == "more" else None
+    #conditional expression yippee    
+    webbrowser.open_new(site) if gather.lower() == "more" else None 
     return
 
 if __name__ == "__main__":
