@@ -17,6 +17,8 @@ def timed_mode():
     start = time()
     score = 0
     game = Creation()
+    name = input("Enter your name: ")
+
 
     
     while True:
@@ -31,7 +33,7 @@ def timed_mode():
 
         while True:
             user_in = input("Enter your solution (or type 'skip' to skip\
-                            to the next hand): ").strip().lower()
+ to the next hand): \n").strip().lower()
 
             if user_in == 'skip':
                 print("Skipping to next hand...")
@@ -50,5 +52,4 @@ def timed_mode():
             print(f"Time Remaining: {int(90 - elapsed)} seconds")
 
     print(f"\n Time's up! Final Score: {score}")
-    name = input("Enter your name: ")
     update_leaderboard(name, score, mode='timed')
