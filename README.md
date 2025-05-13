@@ -36,7 +36,8 @@
 #### 7. After all rounds are completed, the final scores for each player will be displayed.
 
 ## 4. Annotated Bibliograph:
-
+#### 24 game How to play. (n.d.). Vimeo. https://vimeo.com/1013357391 McLeod, J. (2024, April 10). 
+#### Twenty-Four - card game rules. https://www.pagat.com/adders/24.html
 
 ## 5. Attribution
 
@@ -45,3 +46,4 @@
 | update_leaderboard |     Krish      |     use of a key function         |
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
+|expression_validator|     Regan      |              regex                |
