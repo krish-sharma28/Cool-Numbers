@@ -46,4 +46,4 @@
 | update_leaderboard |     Krish      |     use of a key function         |
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
-|expression_validator|     Regan      |              regex                |
+|validate_expression |     Regan      |              regex                |
