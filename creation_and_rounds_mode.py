@@ -2,7 +2,7 @@ import sys
 import random
 from expression_validator import validate_expression
 from leaderboard import update_leaderboard
-from hint_generator import generate_hint
+#from hint_generator import generate_hint
 class Creation:
     """
         Handles creation of unique 4-card hands from a deck of cards.
@@ -89,6 +89,19 @@ def card():
             print("Enter a valid number.")
     
     return players, rounds
+
+def generate_hint(numbers):
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
+            pair = (numbers[i], numbers[j])
+            for op in ['+', '-', '*', '/']:
+                try:
+                    result = eval(f"{pair[0]} {op} {pair[1]}")
+                    if 12 <= result <= 20:
+                        return f"Try combining {pair[0]} {op} {pair[1]} = {result:.2f}"
+                except ZeroDivisionError:
+                    continue
+    return "No hints found!"
 
 def play_game(players, rounds):
     """

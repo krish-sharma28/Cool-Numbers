@@ -31,13 +31,12 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 ### If you type anything other than those four keywords, you’ll get an error message prompting you to try again.
 
 ### When playing the game: 
-#### 1. After typing "play", you'll be prompted to enter all player names. Enter each name followed by pressing Enter. When finished, type done.
-#### 2. You'll then enter the number of rounds you'd like to play (e.g., 5).
+#### 1. After typing "play", you'll be prompted to choose your mode ("Rounds" or "Timed"). Then you will be prompted to enter all player names. Enter each name followed by pressing Enter. When finished, type done. Note: Timed mode is always single-player, Rounds can be either
+#### 2. In Rounds mode, you'll then enter the number of rounds you'd like to play (e.g., 5)., in Timed mode, your game begins once the player name is input.
 #### 3. A random set of four numbers (a "card") will be displayed. 
-#### 4. The first player who solves it types their name.
-#### 5. That player is then asked to input a solution using ______?????(required input format)
-#### 6. The program will use the ___??? function to check if your solution is correct or not. If the input is evaluated to exactly 24, the player earns points. Otherwise, no point is awarded. Also, the player can type "skip" if no one solves the round. 
-#### 7. After all rounds are completed, the final scores for each player will be displayed.
+#### 4. In rounds mode, the player will be asked to input a name. That player is then asked to input a solution using ______?????(required input format) The program will use the ___??? function to check if your solution is correct or not. If the input is evaluated to exactly 24, the player earns points. Otherwise, no point is awarded. There is an option for a "hint," and you get one per round. Also, the player can type "skip" if no one solves the round. 
+#### 5. In timed mode, the player will have 90 seconds to answer as many "cards" as they can. There are no hints, but the player has an option to "skip" like during rounds.
+#### 7. Final scores are displayed at the end, either once the rounds have been played or once time is up.
 
 ## 4. Annotated Bibliograph:
 #### 24 game How to play. (n.d.). Vimeo. https://vimeo.com/1013357391 McLeod, J. (2024, April 10). 
@@ -50,7 +49,8 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 | update_leaderboard |     Krish      |     use of a key function         |
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |                                   |
-|validate_expression |     Regan      |     regex, list comphrehensions   |
+| validate_expression|     Regan      |     regex, list comphrehensions   |
+|  generate_hint     |     Regan      |                                   |
 |     get_args       |    Jordan B.   |        argument parsing           |
 |       intro        |    Jordan B.   |                                   |
 |       help         |    Jordan B.   |      conditional expressions      |
