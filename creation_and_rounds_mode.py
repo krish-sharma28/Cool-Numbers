@@ -101,6 +101,18 @@ def card():
     return players, rounds
 
 def generate_hint(numbers):
+    """Generates a hint by finding a pair of numbers from the input list that,
+    when combined using a basic arithmetic operation, that results in a value 
+    greater than or equal to 12 and less than or equal to 20.
+
+    Parameters:
+        numbers (list of int or float): A list of numeric values to search 
+        through.
+
+    Returns:
+        str: A string suggesting a valid combination that yields a result 
+            within the target range, or "No hints found!" if no possible pair 
+            exists."""
     for i in range(len(numbers)):
         for j in range(i+1, len(numbers)):
             pair = (numbers[i], numbers[j])
