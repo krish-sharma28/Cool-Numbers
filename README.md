@@ -36,7 +36,7 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 #### 3. A random set of four numbers (a "card") will be displayed. 
 #### 4. In rounds mode, the player will be asked to input a name. That player is then asked to input a solution using ______?????(required input format) The program will use the ___??? function to check if your solution is correct or not. If the input is evaluated to exactly 24, the player earns points. Otherwise, no point is awarded. There is an option for a "hint," and you get one per round. Also, the player can type "skip" if no one solves the round. 
 #### 5. In timed mode, the player will have 90 seconds to answer as many "cards" as they can. There are no hints, but the player has an option to "skip" like during rounds.
-#### 7. Final scores are displayed at the end, either once the rounds have been played or once time is up.
+#### 6. Final scores are displayed at the end, either once the rounds have been played or once time is up.
 
 ## 4. Annotated Bibliograph:
 #### 24 game How to play. (n.d.). Vimeo. https://vimeo.com/1013357391 McLeod, J. (2024, April 10). 
