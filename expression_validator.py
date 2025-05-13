@@ -21,7 +21,7 @@ def validate_expression(expression, numbers):
     target = 24
     
     try:
-        used_numbers = list(map(int, re.findall(r'\d+', expression)))
+        used_numbers = [int(num) for num in re.findall(r'\d+', expression)]
     except ValueError:
         print("Error: Couldn't extract numbers from expression.")
         return False
