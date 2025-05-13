@@ -1,9 +1,8 @@
 regan,1000
-<<<<<<< HEAD
-=======
 regan,1000
->>>>>>> 380ad5156c8957ed15e7a14ef4868570bb29397c
 krish,0
 krish,0
 jin,0
 jin,0
+regan,0
+regan,0

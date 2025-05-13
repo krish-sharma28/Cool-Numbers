@@ -47,6 +47,10 @@
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
 |validate_expression |     Regan      |              regex                |
+<<<<<<< HEAD
 |     get_args       |    Jordan B.   |        argument parsing           |
 |       intro        |    Jordan B.   |  f-strings containing expressions |
 |       help         |    Jordan B.   |  with statements/conditional expr |
+=======
+|validate_expression |     Regan      |        list comphrehensions       |
+>>>>>>> adca1f9f372859c59aed478b2bf984a66e9998a1
