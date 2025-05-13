@@ -11,7 +11,11 @@
 ### - timed_mode.py:  Runs the timed game mode where the player has 90 seconds to solve as many hands as possible.
 ## 2. How to run the program: 
 ### Open the terminal, navigate to the folder containing the files, and run: python main.py
-
+There are also optional arguments when running the program. 
+***--mode*** which takes you directly to Timed or Rounds mode
+***--leaderboard*** which takes you directly to Timed or Rounds leaderboard
+Both take options Timed and Rounds.
+e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the timed mode. Helpful for debugging or just skipping beginning.
 ## 3. How to use the program: 
 ### When the program starts, you'll see a welcome message followed by introduction. After read through all the words, you'll see a prompt like this: What would you like to do?
 
@@ -47,10 +51,7 @@
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
 |validate_expression |     Regan      |              regex                |
-<<<<<<< HEAD
 |     get_args       |    Jordan B.   |        argument parsing           |
 |       intro        |    Jordan B.   |  f-strings containing expressions |
 |       help         |    Jordan B.   |  with statements/conditional expr |
-=======
 |validate_expression |     Regan      |        list comphrehensions       |
->>>>>>> adca1f9f372859c59aed478b2bf984a66e9998a1
