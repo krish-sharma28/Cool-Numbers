@@ -55,4 +55,6 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 |       intro        |    Jordan B.   |                                   |
 |       help         |    Jordan B.   |      conditional expressions      |
 |     play_game      |       Jin      |composition of 2 classes, f-strings|
+|       card         |       Jin      |                                   |
+|  draw_unique_hand  |       Jin      |                                   |
                                                                  
