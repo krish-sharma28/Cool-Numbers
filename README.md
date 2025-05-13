@@ -1,10 +1,16 @@
 # Cool-Numbers
-# Cool-Numbers
 
 ## 1. An explanation of the purpose of each file in the repository:
-
+### - main.py: This file is the main controller for a command-line version of the 24 Game.  By running it, players can choose to play the game, view leaderboards, read game rules, or exit the game.
+### - creation_and_rounds_mode.py: Defines the logic for the "Rounds" mode and include a class called Creation that creates a 4-card hand. The main capabilites of this file is to allow players play the "Rounds" mode and generate 4-card hands that could be also used in "Timed" mode.
+### - expression_validator.py: This file validates players' math expression based on provided numbers to see if it evaluates to 24. 
+### - helpstring.txt: ????
+### - leaderboard.py: Updates and displays a leaderboard by adding a new player's score.
+### - leaderboard_rounds.txt: Records players' scores who played the "Rounds" mode.
+### - leaderboard_timed.txt: Records players' scores who played the "Timed" mode.
+### - timed_mode.py:  Runs the timed game mode where the player has 90 seconds to solve as many hands as possible.
 ## 2. How to run the program: 
-### Open your terminal, navigate to the folder containing your code, and run: python ourfile_name.py
+### Open your terminal, navigate to the folder containing your code, and run: python main.py
 
 ## 3. How to use the program: 
 ### When the program starts, you'll see a welcome message followed by introduction. After read through all the words, you'll see a prompt like this: What would you like to do?
