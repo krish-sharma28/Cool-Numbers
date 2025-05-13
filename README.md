@@ -49,9 +49,10 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 | -------------------|:--------------:| ---------------------------------:|
 | update_leaderboard |     Krish      |     use of a key function         |
 | show_leaderboard   |     Krish      |      with statements              |
-| timed_mode         |     Krish      |  f-strings containing expressions |
-|validate_expression |     Regan      |              regex                |
+| timed_mode         |     Krish      |                                   |
+|validate_expression |     Regan      |     regex, list comphrehensions   |
 |     get_args       |    Jordan B.   |        argument parsing           |
-|       intro        |    Jordan B.   |                 none              |
-|       help         |    Jordan B.   |  with statements/conditional expr |
-|validate_expression |     Regan      |        list comphrehensions       |
+|       intro        |    Jordan B.   |                                   |
+|       help         |    Jordan B.   |      conditional expressions      |
+|     play_game      |       Jin      | composition of two custom classes,|
+                                        f-strings                         |
