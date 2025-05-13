@@ -52,6 +52,6 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 | timed_mode         |     Krish      |  f-strings containing expressions |
 |validate_expression |     Regan      |              regex                |
 |     get_args       |    Jordan B.   |        argument parsing           |
-|       intro        |    Jordan B.   |  f-strings containing expressions |
+|       intro        |    Jordan B.   |                 none              |
 |       help         |    Jordan B.   |  with statements/conditional expr |
 |validate_expression |     Regan      |        list comphrehensions       |
