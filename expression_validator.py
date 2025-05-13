@@ -31,7 +31,8 @@ def validate_expression(expression, numbers):
         if num in temp:
             temp.remove(num)
         else:
-            print("You can't use these numbers. Cheater.")
+            print("Your answer isn't valid! Make sure you are only using the"
+                  " numbers provided, and entering a valid answer!")
             return False
 
 
@@ -42,7 +43,7 @@ def validate_expression(expression, numbers):
             print("Correct! +1000 points!")
             return True
         else:
-            print("Incorrect: Wrong result.")
+            print("Incorrect! No points awarded!")
             return False
 
     except Exception as e:

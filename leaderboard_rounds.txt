@@ -1,8 +1,13 @@
 regan,1000
 regan,1000
+regan,1000
+regan,1000
 krish,0
 krish,0
 jin,0
 jin,0
+regan,0
+regan,0
+regan,0
 regan,0
 regan,0

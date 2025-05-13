@@ -7,9 +7,8 @@ from timed_mode import timed_mode
 from creation_and_rounds_mode import Creation, card, play_game
 from leaderboard import show_leaderboard
 
-def get_args(): 
-    """ Written by Jordan Bennett. Demonstrates Argument Parsing.
-    Parses args for ease of access to game. 
+def get_args():
+    """Parses args for ease of access to game. 
     Has two options, --mode and --leaderboard
     Both take "timed" and "rounds" as choices.
     
@@ -31,8 +30,7 @@ def get_args():
     return parser.parse_args()
 
 def intro():
-    """ Written by Jordan Bennett. Demonstrates f-strings.
-    Logic for the introduction to the game. Allows user to pick between
+    """ Logic for the introduction to the game. Allows user to pick between
     leaderboard, rules, play, or exit.
     Prompts the user in a loop until a valid option is selected.
     
@@ -87,9 +85,7 @@ and dividing 4 numbers to reach 24.
 
 
 def help():
-    """ Written by Jordan Bennett. Demonstrates "with" loops and
-    conditional expressions. 
-    Prints out rules from a txt file.
+    """ Prints out rules from a txt file.
     
         Side effects:
             - Reads from file

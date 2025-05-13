@@ -2,6 +2,7 @@ import sys
 import random
 from expression_validator import validate_expression
 from leaderboard import update_leaderboard
+from hint_generator import generate_hint
 class Creation:
     """
         Handles creation of unique 4-card hands from a deck of cards.
@@ -119,12 +120,28 @@ def play_game(players, rounds):
         if player_name not in scores:
             print("Invalid player name.")
             continue
+        
+        hint_used = False
 
-        solution = input("Enter your solution: ")
-        if validate_expression(solution, hand):
-            scores[player_name] += 1000
-        else:
-            print("Incorrect.")
+        while True:
+            solution = input("Enter your solution (or type 'hint'): ").strip()
+            if solution.lower() == "hint":
+                if not hint_used:
+                    print(generate_hint(hand))
+                    hint_used = True
+                else:
+                    print("You've already used your hint this round.")
+                continue
+            is_correct = validate_expression(solution, hand)
+            
+            if is_correct:
+                scores[player_name] += 1000
+                break  # exit loop on correct answer
+            else:
+                break 
+            
+            
+            
     print("\nFinal Scores:")
     for player, score in scores.items():
         print(f"{player}: {score}")
