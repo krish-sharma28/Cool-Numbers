@@ -37,4 +37,11 @@
 
 ## 4. Annotated Bibliograph:
 
+
 ## 5. Attribution
+
+| Method/Function    | Primary Author |     Techniques demonstrated       |
+| -------------------|:--------------:| ---------------------------------:|
+| update_leaderboard |     Krish      |     use of a key function         |
+| show_leaderboard   |     Krish      |      with statements              |
+| timed_mode         |     Krish      |  f-strings containing expressions |
