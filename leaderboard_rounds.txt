@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 regan,1000
 regan,1000
 krish,0
