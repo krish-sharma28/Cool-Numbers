@@ -4,7 +4,7 @@
 ### - main.py: This file is the main controller for a command-line version of the 24 Game.  By running it, players can choose to play the game, view leaderboards, read game rules, or exit the game.
 ### - creation_and_rounds_mode.py: Defines the logic for the "Rounds" mode and include a class called Creation that creates a 4-card hand. The main capabilites of this file is to allow players play the "Rounds" mode and generate 4-card hands that could be also used in "Timed" mode.
 ### - expression_validator.py: This file validates players' math expression based on provided numbers to see if it evaluates to 24. 
-### - helpstring.txt: ????
+### - helpstring.txt: Holds the text displayed by help().
 ### - leaderboard.py: Updates and displays a leaderboard by adding a new player's score.
 ### - leaderboard_rounds.txt: Records players' scores who played the "Rounds" mode.
 ### - leaderboard_timed.txt: Records players' scores who played the "Timed" mode.
@@ -47,3 +47,6 @@
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
 |validate_expression |     Regan      |              regex                |
+|     get_args       |    Jordan B.   |        argument parsing           |
+|       intro        |    Jordan B.   |  f-strings containing expressions |
+|       help         |    Jordan B.   |  with statements/conditional expr |
