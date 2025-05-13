@@ -47,3 +47,4 @@
 | show_leaderboard   |     Krish      |      with statements              |
 | timed_mode         |     Krish      |  f-strings containing expressions |
 |validate_expression |     Regan      |              regex                |
+|validate_expression |     Regan      |        list comphrehensions       |
