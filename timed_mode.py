@@ -24,11 +24,10 @@ def timed_mode():
         elapsed = now - start
         if elapsed >= 90:
             break
-
+        name = input("Enter your name: ")
         print(f"\nTime Remaining: {int(90 - elapsed)} seconds")
         hand = game.draw_unique_hand()
         print(f"Your Hand: {hand}")
-
         while True:
             user_in = input(
                 "Enter your solution (or type 'skip' to skip "
@@ -52,5 +51,4 @@ def timed_mode():
             print(f"Time Remaining: {int(90 - elapsed)} seconds")
 
     print(f"\n Time's up! Final Score: {score}")
-    name = input("Enter your name: ")
     update_leaderboard(name, score, mode='timed')

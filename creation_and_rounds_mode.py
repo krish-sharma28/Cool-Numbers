@@ -13,8 +13,7 @@ class Creation:
             recent_hands (list of tuple): A list of previously drawn hands (each as 
                 a sorted 4-card tuple) to ensure uniqueness when drawing new hands.
         Side Effects:
-            The `draw_unique_hand` method modifies the `recent_hands` list by 
-            appending any newly drawn unique hand.
+            The `draw_unique_hand` method modifies the `recent_hands` list by appending any newly drawn unique hand.
         Raises:
             ValueError: If there are fewer than 4 cards in the deck.
             Exception: If a unique hand cannot be found within the maximum number of attempts.
@@ -123,7 +122,6 @@ def play_game(players, rounds):
 
         solution = input("Enter your solution: ")
         if validate_expression(solution, hand):
-            print("Correct! +1000 point")
             scores[player_name] += 1000
         else:
             print("Incorrect.")
