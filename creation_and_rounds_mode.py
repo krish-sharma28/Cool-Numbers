@@ -10,33 +10,42 @@ class Creation:
         hands are unique with respect to recently drawn hands.
 
         Attributes:
-            full_deck (list of int): The deck of cards from 1 to 9, with a total of 36-card deck.
-            recent_hands (list of tuple): A list of previously drawn hands (each as 
-                a sorted 4-card tuple) to ensure uniqueness when drawing new hands.
+            full_deck (list of int): The deck of cards from 1 to 9,
+                with a total of 36-card deck.
+            recent_hands (list of tuple): A list of previously drawn hands 
+                (each as a sorted 4-card tuple) to ensure uniqueness
+                when drawing new hands.
         Side Effects:
-            The `draw_unique_hand` method modifies the `recent_hands` list by appending any newly drawn unique hand.
+            The `draw_unique_hand` method modifies the `recent_hands` list by
+                appending any newly drawn unique hand.
         Raises:
             ValueError: If there are fewer than 4 cards in the deck.
-            Exception: If a unique hand cannot be found within the maximum number of attempts.
+            Exception: If a unique hand cannot be found within the
+                maximum number of attempts.
     """
 
     def __init__(self):
         """
-        Draws a unique 4-card hand from the full deck that has not been used recently
+        Draws a unique 4-card hand from the full deck that
+            has not been used recently
         
         Args:
-            full_deck (list of int): Contains four copies of each number from 1 to 9.
-            recent_hands (list of tuple): Stores recently drawn unique hands to avoid repeats. 
+            full_deck (list of int): Contains four copies of each 
+                number from 1 to 9.
+            recent_hands (list of tuple): Stores recently drawn 
+                unique hands to avoid repeats. 
         """
         self.full_deck = [val for val in range(1, 10) for _ in range(4)]
         self.recent_hands = []
 
     def draw_unique_hand(self, max_attempts=100):
         """
-        Draw a unique 4-card hand from the given deck that has not been used recently.
+        Draw a unique 4-card hand from the given deck that has not been 
+            used recently.
 
         Args:
-            max_attempts (int): Maximum number of attempts to find a unique handm default is 100.
+            max_attempts (int): Maximum number of attempts to find a 
+                unique handm default is 100.
 
         Returns:
             list of int: A 4-card hand not in recent_hands
@@ -59,10 +68,11 @@ class Creation:
 
 def card():
     """
-    Prompts for player names and the number of rounds to play for the Rounds mode.
-    This function collects the names of players and ensures that a valid 
-    number of rounds is input by the user. It returns the list of player names 
-    and the number of rounds to be played.
+    Prompts for player names and the number of rounds 
+        to play for the Rounds mode. This function collects the names of players
+        and ensures that a valid number of rounds is input by the user.
+        It returns the list of player names and the number of
+        rounds to be played.
 
     Returns:
         tuple: A tuple containing:
@@ -98,15 +108,18 @@ def generate_hint(numbers):
                 try:
                     result = eval(f"{pair[0]} {op} {pair[1]}")
                     if 12 <= result <= 20:
-                        return f"Try combining {pair[0]} {op} {pair[1]} = {result:.2f}"
+                        return f"Try combining {pair[0]} {op} {pair[1]} = \
+                    {result:.2f}"
                 except ZeroDivisionError:
                     continue
     return "No hints found!"
 
 def play_game(players, rounds):
     """
-    Plays the card game for the specified number of rounds with the given players.
-    This function draws hands, validates solutions, and keeps track of player scores. After each round, it updates the scores and prints the final results at the end.
+    Plays the card game for the specified number of rounds with 
+        the given players. This function draws hands, validates solutions,
+        and keeps track of player scores. After each round, it updates
+        the scores and prints the final results at the end.
 
     Args:
         players (list of str): The list of player names.
@@ -115,7 +128,8 @@ def play_game(players, rounds):
         - Updates and prints the final scores after all rounds are completed.
         - Updates the leaderboard with the most recent scores.
     Raises:
-        ValueError: If the player name entered is not valid or the solution is invalid.
+        ValueError: If the player name entered is not valid 
+        or the solution is invalid.
     """
 
     game = Creation()
