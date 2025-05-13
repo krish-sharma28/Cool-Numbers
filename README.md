@@ -10,7 +10,7 @@
 ### - leaderboard_timed.txt: Records players' scores who played the "Timed" mode.
 ### - timed_mode.py:  Runs the timed game mode where the player has 90 seconds to solve as many hands as possible.
 ## 2. How to run the program: 
-### Open your terminal, navigate to the folder containing your code, and run: python main.py
+### Open the terminal, navigate to the folder containing the files, and run: python main.py
 
 ## 3. How to use the program: 
 ### When the program starts, you'll see a welcome message followed by introduction. After read through all the words, you'll see a prompt like this: What would you like to do?
