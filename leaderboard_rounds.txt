@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 regan,1
 regan,1
-=======
->>>>>>> c2c6f6fb834e52c9f53612d03ddce6cee6e933c2
 krish,0
 krish,0
 jin,0
