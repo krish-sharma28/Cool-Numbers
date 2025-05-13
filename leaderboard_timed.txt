@@ -1,2 +1,4 @@
 regan,3000
 Krish,2000
+jin,0
+Jin,0
