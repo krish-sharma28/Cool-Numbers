@@ -56,5 +56,5 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 |       help         |    Jordan B.   |      conditional expressions      |
 |     play_game      |       Jin      |            f-strings              |
 |       card         |       Jin      |                                   |
-|  draw_unique_hand  |       Jin      |optional parameters w/ default value|
+|  draw_unique_hand  |       Jin      |optional parameters with default value|
                                                                  
