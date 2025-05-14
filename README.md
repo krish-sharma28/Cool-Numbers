@@ -54,7 +54,7 @@ e.x. ```python3 main.py --mode timed``` takes you directly to the setup for the 
 |     get_args       |    Jordan B.   |        argument parsing           |
 |       intro        |    Jordan B.   |                                   |
 |       help         |    Jordan B.   |      conditional expressions      |
-|     play_game      |       Jin      |composition of 2 classes, f-strings|
+|     play_game      |       Jin      |            f-strings              |
 |       card         |       Jin      |                                   |
-|  draw_unique_hand  |       Jin      |                                   |
+|  draw_unique_hand  |       Jin      |optional parameters w/ default value|
                                                                  
